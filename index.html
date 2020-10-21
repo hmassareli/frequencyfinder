@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="jquery-3.5.1.min.js" ></script>
+	
+	<script type="text/javascript" src="rank5k.js" ></script>
+	<script type="text/javascript" src="ranker.js"> </script>
+		
+	
+	<style type = "text/css">
+		*{
+			font-family:Verdana, Geneva, Tahoma, sans-serif;
+		}
+		body{
+			background-color: #e0e0e0
+
+		}
+		tr{
+			background-color: white;
+		}
+		.tabelaResultados  tr:nth-child(even) {
+		background-color:#dddddd;
+		}
+		.tabelaResultados{
+			box-shadow: 1px 1px 5px 2px #703A5A;
+			border-spacing: 4px; 
+			
+		}
+		
+		tr:first-child{
+			border:1px solid #b9b9b9;
+		}
+		#entrada{
+			width: max-content;
+			min-width: 200px;
+			margin:auto;
+			margin-bottom:1vw;
+			box-shadow: 1px 1px 5px 2px #cbd0d1;
+			padding: 1vw;
+			border-radius: 2px;
+			background-color: white;
+			font-size:calc(12px + 1vw);
+			
+		}
+		td,th{
+			border: 1px solid rgba(214, 214, 214, 0.698);
+			border-collapse: collapse;
+			min-width: 10vw;
+			
+			
+		}
+		table{
+			border-collapse: collapse;
+			margin:auto;
+			
+			
+			text-align: center;
+		}
+		 th {
+			background: #703A5A;
+			color:rgb(236, 236, 236);
+			font-weight:300;
+			padding:0.5vw;
+			width:max-content;
+		}
+		
+		
+		#tabela{
+			background-color: rgb(238, 238, 238);
+			height:400px;
+			margin:auto;
+			margin-top: 2vw;
+			width: 80%;
+			border-radius: 2px;
+		}
+		input{
+			border:0px;
+			box-shadow: 0px 1px 1px #999999;
+		}
+		input[type='file'] {
+  		display: none
+		}
+		#label-file{
+			box-shadow: 1px 2px 5px gray;
+			font-size:1.5vw;
+			border-radius:2px;
+			padding:3px;
+			text-align: center;
+			display: block;
+			margin-top:5px;
+			border:1px solid #166665;
+			color:white;
+			background-color: #166665;
+		}
+		#label-file:hover{
+			background-color: #104b4a;
+			box-shadow: 1px 1px 5px gray;
+		}
+
+		</style>
+</head>
+<body>
+	<div id = entrada>
+	Buscar matches entre <br><input type="number" id="range" style="width: 5em" placeholder="Start"> <input type="number" id="range2" style="width: 5em" placeholder="End"><br>
+	Número de Resultados<br> <input type="number" id="qtdRank" style="width: 5em" value = "5"> <br>
+	Trechos de: <input type="number" id="tamTrecho" style="width: 5em" value = "15"> <br>
+	<input id = "input-arquivo"" type = "file" onchange="onChange(event)" multiple = "">
+	<label for = "input-arquivo" id = "label-file">Upload Subtitles</label> 
+</div>
+	<div id = "tabela">
+		<table>
+	<thead>
+		<tr>
+			<th>File</th><th>TimeSpan</th><th>Matches</th><th>Watch Snippet</th>
+		</tr>
+	</thead>
+	<tbody class = "tabelaResultados">
+		
+	</tbody>
+</table>
+
+
+	 </div>
+
+
+</body>
+</html>
